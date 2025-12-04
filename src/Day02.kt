@@ -1,11 +1,11 @@
 
-fun List<String>.toLongPair(): List<Pair<Long, Long>> =
-    this.map { it.split(",") }
-        .flatten()
-        .map { it.split("-") }
-        .map { Pair(first = it[0].toLong(), second = it[1].toLong()) }
-
 fun main() {
+
+    fun List<String>.toLongPair(): List<Pair<Long, Long>> =
+        this.map { it.split(",") }
+            .flatten()
+            .map { it.split("-") }
+            .map { Pair(first = it[0].toLong(), second = it[1].toLong()) }
 
     fun part1(input: List<String>): Long {
         var sum = 0L
